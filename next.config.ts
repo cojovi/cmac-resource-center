@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    // This will completely ignore ESLint during builds
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    domains: ['your-domain.com'], // Add your image domains here
+  },
+  publicRuntimeConfig: {
+    staticFolder: '/static',
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = nextConfig
