@@ -4,8 +4,9 @@ import Ticker from './Ticker'
 
 export default function Hero() {
   return (
-    <div className="flex flex-col">
-      <div className="bg-red-700 text-white py-16">
+    <>
+      <Ticker />
+      <div className="bg-[#B91C1C] text-white py-16">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
             <Image
@@ -21,8 +22,7 @@ export default function Hero() {
           <Button variant="secondary" size="lg" className="bg-black text-white hover:bg-gray-800">Get Started</Button>
         </div>
       </div>
-      <Ticker />
-    </div>
+    </>
   )
 }
 

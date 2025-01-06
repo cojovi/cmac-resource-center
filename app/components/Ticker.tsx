@@ -8,8 +8,9 @@ export default function Ticker(): React.JSX.Element {
     const [combinedMessage, setCombinedMessage] = useState<string>('');
 
     useEffect(() => {
-        // Combine all messages with spacing
-        const message = tickerMessages.join('   ●   ') + '   ●   ';
+        // Format messages to look like stock tickers
+        const formattedMessages = tickerMessages.map(msg => `[ ${msg} ]`);
+        const message = formattedMessages.join('     ');
         setCombinedMessage(message);
 
         // Animation function
@@ -30,16 +31,16 @@ export default function Ticker(): React.JSX.Element {
     }, []);
 
     return (
-        <div className={`w-full overflow-hidden ${tickerBackground} relative`}>
-            <div className="py-3 px-4">
+        <div className={`w-full ${tickerBackground} sticky top-0 z-50 border-b border-gray-600`}>
+            <div className="h-8 flex items-center overflow-hidden">
                 <div
-                    className={`whitespace-nowrap ${tickerTextColor} font-medium text-lg`}
+                    className={`whitespace-nowrap ${tickerTextColor} font-mono text-sm tracking-wider`}
                     style={{
                         transform: `translateX(-${currentPosition}px)`,
                         transition: 'transform 0.05s linear'
                     }}
                 >
-                    {combinedMessage + combinedMessage} {/* Duplicate message for smooth loop */}
+                    {combinedMessage + '     ' + combinedMessage}
                 </div>
             </div>
         </div>
