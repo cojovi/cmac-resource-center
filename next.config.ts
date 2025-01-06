@@ -6,6 +6,7 @@ const nextConfig = {
   },
   images: {
     domains: ['your-domain.com'], // Add your image domains here
+    unoptimized: true, // This allows local images to work without optimization
   },
   publicRuntimeConfig: {
     staticFolder: '/static',
