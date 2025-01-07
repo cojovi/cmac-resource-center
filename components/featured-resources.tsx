@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 const featuredResources = [
-  { title: "New Onboarding Process", description: "Learn about our streamlined onboarding for new hires" },
-  { title: "Quarterly Town Hall", description: "Watch the recording of our latest company-wide meeting" },
-  { title: "Wellness Program Launch", description: "Discover our new initiatives for employee well-being" },
+  { title: "BB Living BuilderLynx Zoom", description: "BB Living Builder Lynx Trade Partner Training, New Vendor Portal Informavtion.  Zoom Meeting ID: 818 6647 4897", url: "https://bblivingresidential.zoom.us/j/81866474897" },
+  { title: "NetSuite Kick Off Zoom", description: "Kick Off Zoom Call for ERP and FSM, and the strategies for efficient implementation", url: "https://bblivingresidential.zoom.us/j/81866474897" },
+  { title: "NetSuite Field Service Management", description: "Hosted by Marianne Ma, our LEAD Technical POC at NetSuite", url: "https://bblivingresidential.zoom.us/j/81866474897" },
 ]
 
 export default function FeaturedResources() {
